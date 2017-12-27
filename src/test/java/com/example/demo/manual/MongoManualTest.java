@@ -20,10 +20,8 @@ import static com.mongodb.client.model.Updates.set;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
-import java.util.function.Consumer;
 
 import org.bson.Document;
 import org.bson.types.ObjectId;
@@ -34,7 +32,6 @@ import com.example.demo.DemoApplicationTests;
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
-import com.mongodb.client.MongoIterable;
 import com.mongodb.client.result.DeleteResult;
 import com.mongodb.client.result.UpdateResult;
 
@@ -82,15 +79,6 @@ public class MongoManualTest extends DemoApplicationTests {
 		final DeleteResult deleteResult = col.deleteOne(eq("role", user.getRole()));
 		assertEquals(1, deleteResult.getDeletedCount());
 
-		//close resources
-		mongo.close();
-	}
-
-
-	private <T> List<T> toList(MongoIterable<T> iterable) {
-		final List<T> result = new ArrayList<>();
-		iterable.forEach((Consumer<T>) result::add);
-		return result;
 	}
 
 	private static Document createDBObject(User user) {
