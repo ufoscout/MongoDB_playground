@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package com.example.demo.manual;
+package com.example.demo.sync;
 
 import static com.mongodb.client.model.Filters.eq;
 import static com.mongodb.client.model.Updates.set;
@@ -35,7 +35,7 @@ import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.result.DeleteResult;
 import com.mongodb.client.result.UpdateResult;
 
-public class MongoManualTest extends DemoApplicationTests {
+public class MongoSyncTest extends DemoApplicationTests {
 
 	@Autowired
 	private MongoClient mongo;

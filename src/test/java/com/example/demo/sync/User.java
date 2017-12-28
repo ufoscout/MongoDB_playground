@@ -13,58 +13,37 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package com.example.demo.pojo;
+package com.example.demo.sync;
 
-import org.bson.types.ObjectId;
+public class User {
 
-public final class Person {
-
-	private ObjectId id;
+	private int id;
 	private String name;
-	private int age;
-	private Address address;
-
-	public Person() {
-	}
-
-	public Person(final String name, final int age, final Address address) {
-		this.id = new ObjectId();
-		this.name = name;
-		this.age = age;
-		this.address = address;
-	}
-
-	public ObjectId getId() {
+	private String role;
+	private boolean isEmployee;
+	
+	public int getId() {
 		return id;
 	}
-
-	public void setId(final ObjectId id) {
+	public void setId(int id) {
 		this.id = id;
 	}
-
 	public String getName() {
 		return name;
 	}
-
-	public void setName(final String name) {
+	public void setName(String name) {
 		this.name = name;
 	}
-
-	public int getAge() {
-		return age;
+	public String getRole() {
+		return role;
 	}
-
-	public void setAge(final int age) {
-		this.age = age;
+	public void setRole(String role) {
+		this.role = role;
 	}
-
-	public Address getAddress() {
-		return address;
+	public boolean isEmployee() {
+		return isEmployee;
 	}
-
-	public void setAddress(final Address address) {
-		this.address = address;
+	public void setEmployee(boolean isEmployee) {
+		this.isEmployee = isEmployee;
 	}
-
-	// Rest of implementation
 }
