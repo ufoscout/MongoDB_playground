@@ -33,15 +33,15 @@
 		</dependency>
 
 
-		<!-- Sync - begin -->
+		<!-- MongoDB - begin -->
 		<dependency>
 			<groupId>org.mongodb</groupId>
 			<artifactId>mongodb-driver</artifactId>
 		</dependency>
-		<!-- Sync - begin -->
+		<!-- MongoDB - begin -->
 
 
-		<!-- Async - begin -->
+		<!-- MongoDB Async - begin -->
 		<dependency>
 			<groupId>org.mongodb</groupId>
 			<artifactId>mongodb-driver-async</artifactId>
@@ -52,7 +52,7 @@
 			<artifactId>netty-handler</artifactId>
 			<version>${netty.version}</version>
 		</dependency>
-		<!-- Async - end -->
+		<!-- MongoDB Async - end -->
 
 
 		<!-- MORPHIA - begin -->
@@ -68,6 +68,14 @@
 			</exclusions>
 		</dependency>
 		<!-- MORPHIA - end -->
+
+
+		<!-- Spring data mongodb - begin -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+		</dependency>
+		<!-- Spring data mongodb - begin -->
 
 
 		<dependency>

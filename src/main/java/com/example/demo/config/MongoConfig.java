@@ -17,6 +17,7 @@ package com.example.demo.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.mongodb.core.MongoTemplate;
 
 import com.mongodb.MongoClient;
 
@@ -38,5 +39,11 @@ public class MongoConfig {
 //		                              new ServerAddress("localhost", 27019),
 //		                              etc...)
 	}
+
+    @Bean
+    public MongoTemplate mongoTemplate() throws Exception {
+    	final String dataBaseName = "SpringDataDB";
+        return new MongoTemplate(mongoClient(), dataBaseName);
+    }
 
 }
